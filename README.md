@@ -1,56 +1,100 @@
-\# IPL Data Engineering Project
+# 🏏 IPL Data Engineering Project 
 
+This project performs a comprehensive data analysis of the Indian Premier League (IPL) using **PySpark on Databricks**. It focuses on large-scale data processing and extracting meaningful insights about player and team performance.
 
+---
 
-\## 📌 Overview
+## 📁 Dataset
 
-This project analyzes IPL cricket data using PySpark on Databricks.
+* `matches.csv`: Match-level data (match ID, season, teams, winner, player of match, etc.)
+* `deliveries.csv`: Ball-by-ball data (batsman, bowler, runs, dismissals, extras, etc.)
 
+Dataset Source: Kaggle IPL Dataset
 
+---
 
-\## ⚙️ Tech Stack
+## 🛠️ Tools Used
 
-\- Python
+* Python 🐍
+* PySpark ⚡
+* Databricks ☁️
+* SQL
 
-\- PySpark
+---
 
-\- Databricks
+## 🎯 Project Objectives
 
+* Identify top-performing batsmen and bowlers
+* Calculate strike rate for player performance
+* Analyze players with most centuries in IPL history
+* Determine best player from each team
+* Analyze team performance and match outcomes
 
+---
 
-\## 📊 Features
+## 📊 Key Insights
 
-\- Top batsmen analysis
+* Top batsmen identified based on total runs scored
+* Strike rate calculated using ball-by-ball data
+* Players with highest number of centuries derived
+* Best player from each team identified using Player of Match awards
+* Team-wise match wins and performance trends analyzed
 
-\- Top bowlers analysis
+---
 
-\- Strike rate calculation
+## ⚙️ Data Processing Steps
 
-\- Most centuries by players
+* Data cleaning (handling null values and duplicates)
+* Joining match-level and delivery-level datasets
+* Aggregation using PySpark (`groupBy`, `agg`)
+* Window functions for ranking players
+* Writing output in distributed format
 
-\- Best player from each team
+---
 
+## 📁 Project Structure
 
+```
+IPL_DATA_ENGINEERING_PROJECT/
+│
+├── data/
+│   ├── matches.csv
+│   └── deliveries.csv
+│
+├── scripts/
+│   └── ipl_analysis.py
+│
+├── output/
+│   └── (generated after running script)
+│
+└── README.md
+```
 
-\## 📁 Dataset
+---
 
-\- matches.csv
+## ▶️ How to Run This Project
 
-\- deliveries.csv
+1. Clone this repository
+2. Place `matches.csv` and `deliveries.csv` inside the `data/` folder
+3. Ensure PySpark is installed and configured
+4. Run the script:
 
+```
+python scripts/ipl_analysis.py
+```
 
+5. Output files will be generated inside the `output/` folder
 
-\## 🚀 Output
+---
 
-Data is processed and stored using Spark transformations.
+## ⚠️ Note
 
+* This project uses PySpark, so a Spark environment is required
+* Output files are not included and will be generated after execution
 
+---
 
-\## 👨‍💻 Author
+## 👨‍💻 Author
 
-Tahseen Nadaf  
-
-Aspiring Data Engineer  
-
-Skills: Python, SQL, PySpark, Databricks
-
+Tahseen Nadaf
+Aspiring Data Engineer | Python | PySpark | SQL | Databricks
