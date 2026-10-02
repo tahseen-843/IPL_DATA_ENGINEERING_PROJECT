@@ -1,4 +1,4 @@
-# 🏏 IPL Data Engineering Project 
+# 🏏 IPL Data Engineering Project
 
 This project performs a comprehensive data analysis of the Indian Premier League (IPL) using **PySpark on Databricks**. It focuses on large-scale data processing and extracting meaningful insights about player and team performance.
 
@@ -9,7 +9,7 @@ This project performs a comprehensive data analysis of the Indian Premier League
 * `matches.csv`: Match-level data (match ID, season, teams, winner, player of match, etc.)
 * `deliveries.csv`: Ball-by-ball data (batsman, bowler, runs, dismissals, extras, etc.)
 
-Dataset Source: Kaggle IPL Dataset
+**Dataset Source:** Kaggle IPL Dataset
 
 ---
 
@@ -62,10 +62,14 @@ IPL_DATA_ENGINEERING_PROJECT/
 │   └── deliveries.csv
 │
 ├── scripts/
-│   └── ipl_analysis.py
+│   ├── ipl_analysis.py
+│   └── visualization.py
 │
 ├── output/
 │   └── (generated after running script)
+│
+├── images/
+│   └── (graphs generated after visualization)
 │
 └── README.md
 ```
@@ -77,13 +81,36 @@ IPL_DATA_ENGINEERING_PROJECT/
 1. Clone this repository
 2. Place `matches.csv` and `deliveries.csv` inside the `data/` folder
 3. Ensure PySpark is installed and configured
-4. Run the script:
+4. Run the analysis script:
 
 ```
 python scripts/ipl_analysis.py
 ```
 
-5. Output files will be generated inside the `output/` folder
+5. Run visualization script:
+
+```
+python scripts/visualization.py
+```
+
+6. Output files will be generated inside the `output/` folder
+7. Graphs will be saved inside the `images/` folder
+
+---
+
+## 📊 Visualizations
+
+### 🏏 Top Batsmen
+
+![Top Batsmen](images/top_batsmen.png)
+
+### 🎯 Top Bowlers
+
+![Top Bowlers](images/top_bowlers.png)
+
+### 💯 Most Centuries
+
+![Centuries](images/centuries.png)
 
 ---
 
